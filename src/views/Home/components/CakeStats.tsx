@@ -50,19 +50,19 @@ const CakeStats = () => {
   const cakeSupply = getBalanceNumber(circSupply);
   const marketCap = eggPrice.times(circSupply);
 
-  let MumuPerBlock = 0;
-  if(farms && farms[0] && farms[0].MumuPerBlock){
-    MumuPerBlock = new BigNumber(farms[0].MumuPerBlock).div(new BigNumber(10).pow(18)).toNumber();
+  let GtokenPerBlock = 0;
+  if(farms && farms[0] && farms[0].GtokenPerBlock){
+    GtokenPerBlock = new BigNumber(farms[0].GtokenPerBlock).div(new BigNumber(10).pow(18)).toNumber();
   }
 
   return (
     <StyledCakeStats>
       <CardBody style={{padding: "24px 10px",paddingBottom: "5px"}}>
         <Heading size="xl" mb="24px" color="primary" style={{marginTop: '10px', marginBottom: '70px'}}>
-          Mumu Stats
+          G-token Stats
         </Heading>
         <Row>
-          <Text fontSize="14px" color="text">Total Mumu Supply</Text>
+          <Text fontSize="14px" color="text">Total Gtoken Supply</Text>
           <CardValue fontSize="14px" value={getBalanceNumber(marketCap)} decimals={0} prefix="$" />
         </Row>
         <Row>
@@ -86,8 +86,8 @@ const CakeStats = () => {
           {maxTxAmount && <CardValue fontSize="14px" value={getBalanceNumber(maxTxAmount)} decimals={0} />}
         </Row>
         <Row>
-          <Text fontSize="14px" color="text">New Mumu/block</Text>
-          <Text bold fontSize="14px">{MumuPerBlock}</Text>
+          <Text fontSize="14px" color="text">New Gtoken/block</Text>
+          <Text bold fontSize="14px">{GtokenPerBlock}</Text>
         </Row>
         <Row>
           <Text fontSize="14px" color="text">Transfer Tax</Text>

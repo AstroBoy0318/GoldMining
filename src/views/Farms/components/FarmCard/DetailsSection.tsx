@@ -49,7 +49,7 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
 }) => {
   const TranslateString = useI18n()
   const liquidityUrlPathParts = getLiquidityUrlPathParts({ quoteTokenAdresses, quoteTokenSymbol, tokenAddresses })
-  const buyUrl = (pid === 2?`https://exchange.pancakeswap.finance/#/add/${liquidityUrlPathParts}`:`https://trade.mumuswap.finance/#/add/${liquidityUrlPathParts}`)
+  const buyUrl = (pid === 2?`https://exchange.pancakeswap.finance/#/add/${liquidityUrlPathParts}`:`https://exchange.pancakeswap.finance/#/add/${liquidityUrlPathParts}`)
 
   return (
     <Wrapper>
@@ -57,7 +57,7 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
         <Text>{TranslateString(316, 'Stake')}:</Text>
         <StyledLinkExternal href={
           isTokenOnly ?
-            `https://trade.mumuswap.finance/#/swap/${tokenAddresses[process.env.REACT_APP_CHAIN_ID]}`
+            `https://exchange.pancakeswap.finance/#/swap/${tokenAddresses[process.env.REACT_APP_CHAIN_ID]}`
             :
           buyUrl
         }>

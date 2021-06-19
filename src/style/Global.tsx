@@ -13,12 +13,12 @@ const GlobalStyle = createGlobalStyle`
     letter-spacing: 0.1em !important;
   }
   @font-face {
-    font-family: "Bunny";
-    src: url(/fonts/bunny/bunny.ttf);
+    font-family: "Mitr";
+    src: url(/fonts/mitr/MitrRegular400.ttf);
   } 
   body {
     background-color: ${({ theme }) => theme.colors.background};
-    font-family: Bunny;
+    font-family: Mitr;
 
     img {
       height: auto;

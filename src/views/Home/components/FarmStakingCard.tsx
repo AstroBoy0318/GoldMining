@@ -16,10 +16,10 @@ import useAllEarnings from '../../../hooks/useAllEarnings'
 import { getBalanceNumber } from '../../../utils/formatBalance'
 
 const StyledFarmStakingCard = styled(Card)`
-  background-image: url('/images/egg/mumu_back.png');
+  background-image: url('/images/egg/gtoken_back.png');
   background-repeat: no-repeat;
   background-position: 85% 50%;
-  background-size: 45%;
+  background-size: 30%;
   min-height: 376px;
   text-align: left;
   height: max-content;
@@ -87,10 +87,10 @@ const FarmedStakingCard = () => {
         <Heading size="xl" mb="24px" style={{ marginTop: '10px',textAlign: "left" }} color="primary">
           {TranslateString(542, 'Farms & Staking')}
         </Heading>
-        <img src="/images/mumu.png" alt="Mumu" style={{ width: "70px",marginBottom: "1em" }}/>
+        <img src="/images/gtoken.png" alt="gtoken" style={{ width: "70px",marginBottom: "1em" }}/>
         <Block>
           <Row>
-            <Label>Mumu to Harvest</Label>
+            <Label>Gtoken to Harvest</Label>
           </Row>
  		      <Row>
             <CakeHarvestBalance earningsSum={earningsSum}/>
@@ -99,7 +99,7 @@ const FarmedStakingCard = () => {
             <Label>~${(eggPrice * earningsSum).toFixed(2)}</Label>
           </Row>
           <Row style={{marginTop: "1em"}}>
-            <Label>Mumu in Wallet</Label>
+            <Label>Gtoken in Wallet</Label>
           </Row>
           <Row>
             <CakeWalletBalance cakeBalance={cakeBalance} />
@@ -118,7 +118,7 @@ const FarmedStakingCard = () => {
               fullWidth
             >
               {pendingTx
-                ? TranslateString(548, ' Mumu')
+                ? TranslateString(548, ' Gtoken')
                 : TranslateString(999, `Harvest all (${balancesWithValue.length})`)}
             </Button>
           ) : (

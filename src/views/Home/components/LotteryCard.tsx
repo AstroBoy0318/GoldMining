@@ -79,13 +79,13 @@ const FarmedStakingCard = () => {
     }
   }, [onMultiClaim, setRequestedClaim])
 
-  const [onPresentBuy] = useModal(<BuyModal max={pizzaBalance} tokenName="Mumu" />)
+  const [onPresentBuy] = useModal(<BuyModal max={pizzaBalance} tokenName="Gtoken" />)
 
   return (
     <StyledLotteryCard>
       <CardBody>
         <Heading mb="20px" color="primary" style={{width: "min(100%,14em)", margin: "0 auto", marginTop: '10px' }} size="xl">
-          {TranslateString(550, 'Mumuswap lottery desk')}
+          {TranslateString(550, 'Gold mining lottery desk')}
         </Heading>
         <Block>
           <Row>

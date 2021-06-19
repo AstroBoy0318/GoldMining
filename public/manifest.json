@@ -1,7 +1,7 @@
 {
-  "short_name": "Mumuswap",
-  "name": "Mumuswap",
-  "description": "Farm Mumu with Mumuswap LP Tokens",
+  "short_name": "Gold Mining",
+  "name": "Gold Mining",
+  "description": "Farm Gtoken with Gtoken LP Tokens",
   "icons": [
     {
       "src": "favicon.ico",

@@ -62,7 +62,7 @@ const TicketCard: React.FC = () => {
             {TranslateString(432, 'View your tickets')}
           </Button>
           <Button fullWidth disabled={requestedApproval} onClick={handleApprove} className="imgBtn">
-            {TranslateString(999, 'Approve Mumu')}
+            {TranslateString(999, 'Approve Gtoken')}
           </Button>
         </>
       )

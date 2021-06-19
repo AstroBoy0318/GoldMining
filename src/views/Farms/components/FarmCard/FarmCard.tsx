@@ -147,7 +147,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
     : '-'
 
   const lpLabel = farm.lpSymbol
-  const earnLabel = 'Mumu'
+  const earnLabel = 'Gtoken'
   const farmAPY = farm.apy && farm.apy.times(new BigNumber(100)).toNumber().toLocaleString(undefined, {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
@@ -202,7 +202,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
         <Text style={{ fontSize: '15px' }}>
           Harvest Lockup
           <HelpDiv>
-            <a href="https://docs.mumuswap.finance">
+            <a href="https://docs.goldmining.finance">
               <HelpIcon color="primary" style={{width: "15px"}}/>
             </a>
             <span className="tooltip">

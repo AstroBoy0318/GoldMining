@@ -73,17 +73,17 @@ const BuyTicketModal: React.FC<BuyTicketModalProps> = ({ max, onDismiss }) => {
         onChange={handleChange}
         max={fullBalance}
         symbol="TICKET"
-        availableSymbol="Mumu"
+        availableSymbol="Gtoken"
       />
       <div>
-        <Tips>Your amount must be a multiple of 10 Mumu</Tips>
-        <Tips>1 Ticket = 10 Mumu</Tips>
+        <Tips>Your amount must be a multiple of 10 Gtoken</Tips>
+        <Tips>1 Ticket = 10 Gtoken</Tips>
       </div>
       <div>
         <Announce>         
-          Ticket purchases are final. Your Mumu cannot be returned to you after buying tickets.
+          Ticket purchases are final. Your Gtoken cannot be returned to you after buying tickets.
         </Announce>
-        <Final>{TranslateString(460, `You will spend: ${cakeCosts(val)} Mumu`)}</Final>
+        <Final>{TranslateString(460, `You will spend: ${cakeCosts(val)} Gtoken`)}</Final>
       </div>
       <ModalActions>
         <Button fullWidth variant="secondary" onClick={onDismiss}>

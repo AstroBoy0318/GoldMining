@@ -6,14 +6,14 @@ const config: MenuEntry[] = [
     label: 'Home',
     icon: 'HomeIcon',
     href: '/',
-  },
+  }, /*
   {
     label: 'Farms',
     icon: 'FarmIcon',
     href: '/farms',
   },
   {
-    label: 'Pools',
+    label: 'craters',
     icon: 'PoolIcon',
     href: '/craters',
   },
@@ -23,11 +23,11 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange',
-        href: 'https://trade.mumuswap.finance/#/swap'
+        href: 'https://exchange.pancakeswap.finance/#/swap'
       },
       {
         label: 'Liquidity',
-        href: 'https://trade.mumuswap.finance/#/pool'
+        href: 'https://exchange.pancakeswap.finance/#/pool'
       }
     ]
   },
@@ -47,19 +47,19 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Automatic LP',
-        href: 'https://docs.mumuswap.finance/',
+        href: 'https://docs.goldmining.finance/',
       },
       {
         label: 'Automatic Burning',
-        href: 'https://docs.mumuswap.finance/automatic-burning',
+        href: 'https://docs.goldmining.finance/automatic-burning',
       },
       {
         label: 'Referral Program',
-        href: 'https://docs.mumuswap.finance/referral-program',
+        href: 'https://docs.goldmining.finance/referral-program',
       },
       {
         label: 'Anti Whale',
-        href: 'https://docs.mumuswap.finance/anti-whale',
+        href: 'https://docs.goldmining.finance/anti-whale',
       },
     ],
   },
@@ -79,22 +79,22 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Github',
-        href: 'https://github.com/mumuswap/',
+        href: 'https://github.com/',
       },
       {
         label: 'Docs',
-        href: 'https://docs.mumuswap.finance/',
+        href: 'https://docs.goldmining.finance/',
       },
       {
         label: 'Roadmap',
-        href: 'https://docs.mumuswap.finance/roadmap',
+        href: 'https://docs.goldmining.finance/roadmap',
       },
       {
         label: 'Blog',
-        href: 'https://mumuswap.medium.com',
+        href: 'https://goldmining.medium.com',
       },
     ],
-  },
+  }, */
 ]
 
 export default config

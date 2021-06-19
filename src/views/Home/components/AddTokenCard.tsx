@@ -91,16 +91,16 @@ const AddTokenCard = () => {
   }
 
   const buyToken = ()=>{
-    window.open("https://trade.mumuswap.finance/#/swap?outputCurrency=".concat(tokenAddress))
+    window.open("https://exchange.pancakeswap.finance/#/swap?outputCurrency=".concat(tokenAddress))
   }
 
   return (
     <MainContainer>
-      <Heading color="primary" size="xl" style={{ width:"100%",textAlign: "center" }}>Add Mumu</Heading>
+      <Heading color="primary" size="xl" style={{ width:"100%",textAlign: "center" }}>Add G-token</Heading>
       <div style={{width: "80%",minWidth: "400px", margin: "0 auto", marginTop: "3em"}}>
         <ItemDiv>
           <div style={{width: "80px", minWidth: "80px"}}>
-            <img src="/images/mumu.png" alt="Mumu" width="64px"/>
+            <img src="/images/gtoken.png" alt="Gtoken" width="64px"/>
           </div>
           <div>
             <div>
@@ -116,10 +116,10 @@ const AddTokenCard = () => {
         </ItemDiv>
         <ItemDiv style={{marginTop: "1em"}}>
           <ChildDiv>
-            <Button onClick={addToken} disabled={isPending}>Add Mumu to <img src="/images/icons/metamask.png" alt="metamask"/></Button>
+            <Button onClick={addToken} disabled={isPending}>Add G-token to <img src="/images/icons/metamask.png" alt="metamask"/></Button>
           </ChildDiv>
           <ChildDiv>
-            <Button onClick={buyToken}>Buy Mumu from <img src="/images/icons/pancake.png" alt="pancake"/></Button>
+            <Button onClick={buyToken}>Buy Gtoken from <img src="/images/icons/pancake.png" alt="pancake"/></Button>
           </ChildDiv>
         </ItemDiv>
       </div>
