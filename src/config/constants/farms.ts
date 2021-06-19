@@ -23,7 +23,7 @@ const farms: FarmConfig[] = [
     risk: 5,
     lpSymbol: 'Gtoken-BNB LP',
     lpAddresses: {
-      97: '0x9232D14201fDCb556E01625b31f3ba2B68a5aEfA',
+      97: '0xd0c157ac9650fbd0cb21a8ba15290c5fc19dfa00',
       56: '0x8347397e40D565eE43c3348188f079623D1A5Cb8',
     },
     tokenSymbol: 'Gtoken',

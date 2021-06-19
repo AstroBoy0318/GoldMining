@@ -4,6 +4,8 @@ import { useDispatch } from 'react-redux'
 import { fetchFarmUserDataAsync, updateUserBalance, updateUserPendingReward } from 'state/actions'
 import { harvest, soushHarvest, soushHarvestBnb } from 'utils/callHelpers'
 import { useGettingtime, useMasterchef, useSousChef } from './useContract'
+import { useFarmUser } from '../state/hooks'
+import useRefresh from './useRefresh'
 
 export const useHarvest = (farmPid: number) => {
   const dispatch = useDispatch()
@@ -60,12 +62,14 @@ export const useHarvestTime = (farmPid: number) => {
   const masterChefContract = useMasterchef()
   const gettingtimeContract = useGettingtime()
   const [time,setTime] = useState(0)
+  const { fastRefresh } = useRefresh()
 
   useEffect(() => {
     const fetchTime = async () => {
-      if(account && time === 0) {
+      if(account && time <= 0) {
         const res = await masterChefContract.methods.userInfo(farmPid, account).call()
-        setTime(res.nextHarvestUntil)
+        const now = await gettingtimeContract.methods.gettingtime().call()
+        setTime(res.nextHarvestUntil-now)
       }
     }
     fetchTime()
@@ -75,26 +79,7 @@ export const useHarvestTime = (farmPid: number) => {
         setTime(time-1)
       },1000)
     }
-  }, [account,masterChefContract,gettingtimeContract,farmPid,time])
-
-  return time
-}
-
-export const useNowTime = () => {
-  const { account } = useWallet()
-  const gettingtimeContract = useGettingtime()
-  const [time,setTime] = useState(0)
-
-  useEffect(() => {
-    const fetchTime = async () => {
-      if(account && time === 0) {
-        const now = await gettingtimeContract.methods.gettingtime().call()
-        console.log("now:".concat(now))
-        setTime(now)
-      }
-    }
-    fetchTime()
-  }, [account,gettingtimeContract,time])
+  }, [account,masterChefContract,gettingtimeContract,farmPid,time,fastRefresh])
 
   return time
 }

@@ -6,7 +6,7 @@ const config: MenuEntry[] = [
     label: 'Home',
     icon: 'HomeIcon',
     href: '/',
-  }, /*
+  },
   {
     label: 'Farms',
     icon: 'FarmIcon',
@@ -16,7 +16,7 @@ const config: MenuEntry[] = [
     label: 'craters',
     icon: 'PoolIcon',
     href: '/craters',
-  },
+  }, /*
   {
     label: 'Trade',
     icon: 'TradeIcon',
