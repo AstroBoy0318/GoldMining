@@ -79,7 +79,7 @@ export const useHarvestTime = (farmPid: number) => {
         setTime(time-1)
       },1000)
     }
-  }, [account,masterChefContract,gettingtimeContract,farmPid,time,fastRefresh])
+  }, [account, masterChefContract, gettingtimeContract, farmPid, time, fastRefresh])
 
   return time
 }

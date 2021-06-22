@@ -65,7 +65,7 @@ const TotalPrizesCard = () => {
             {currentLotteryNumber === 0 && <Skeleton height={20} width={56} />}
             {currentLotteryNumber > 0 && (
               <>
-                <Text fontSize="18px" style={{ fontWeight: 600,margin: "0 auto" }} color="text">{`Round #${currentLotteryNumber}`}</Text>
+                <Text fontSize="18px" style={{ fontWeight: 600,margin: "0 auto" }} color="text">{`Round #${currentLotteryNumber*1 + 1}`}</Text>
               </>
             )}
           </Flex>
@@ -79,7 +79,7 @@ const TotalPrizesCard = () => {
               <Text fontSize="22px" color="primary" style={{paddingTop: '15px'}}>
                 {TranslateString(999, 'Total Pot:')}
               </Text>
-              <Heading size="lg" style={{color:colors.text, display:"none"}}>{lotteryPrizeWithCommaSeparators} Hel3</Heading>
+              <Heading size="lg" style={{color:colors.text, display:"none"}}>{lotteryPrizeWithCommaSeparators} Gtoken</Heading>
             </PrizeCountWrapper>
           </Left>
           <Right>

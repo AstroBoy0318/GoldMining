@@ -16,20 +16,6 @@ const config: MenuEntry[] = [
     label: 'craters',
     icon: 'PoolIcon',
     href: '/craters',
-  }, /*
-  {
-    label: 'Trade',
-    icon: 'TradeIcon',
-    items: [
-      {
-        label: 'Exchange',
-        href: 'https://exchange.pancakeswap.finance/#/swap'
-      },
-      {
-        label: 'Liquidity',
-        href: 'https://exchange.pancakeswap.finance/#/pool'
-      }
-    ]
   },
   {
     label: 'Referrals',
@@ -40,6 +26,11 @@ const config: MenuEntry[] = [
     label: 'Lottery',
     icon: 'TicketIcon',
     href: '/lottery',
+  },
+  {
+    label: 'Landing page',
+    icon: 'SunIcon',
+    href: 'https://goldmining.finance/',
   },
   {
     label: 'Features',
@@ -94,7 +85,7 @@ const config: MenuEntry[] = [
         href: 'https://goldmining.medium.com',
       },
     ],
-  }, */
+  },
 ]
 
 export default config

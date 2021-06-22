@@ -8,6 +8,7 @@ import styled from 'styled-components'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import useStake from '../../../../hooks/useStake'
 import { RefferalContext } from '../../../../contexts/RefferalContext'
+import { CAKE_POOL_PID } from '../../../../config'
 
 interface FarmCardActionsProps {
   earnings?: BigNumber
@@ -42,7 +43,7 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid }) => {
     <Flex mb="8px" justifyContent="space-between" alignItems="center" style={{marginTop: "-5px"}}>
       <Heading color={rawEarningsBalance === 0 ? 'text' : 'text'}>{displayBalance}</Heading>
       <BalanceAndCompound>
-        {pid === 3 ?
+        {pid === CAKE_POOL_PID ?
           <HarvestButton
             disabled={rawEarningsBalance === 0 || pendingTx || harvestTime > 0}
             size='sm'

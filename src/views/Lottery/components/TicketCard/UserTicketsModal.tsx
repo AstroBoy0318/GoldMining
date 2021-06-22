@@ -66,6 +66,7 @@ const TicketsList = styled.div`
 
 const StyledButton = styled(Button)`
   margin-top: ${(props) => props.theme.spacing[2]}px;
+  float: right;
 `
 
 export default UserTicketsModal

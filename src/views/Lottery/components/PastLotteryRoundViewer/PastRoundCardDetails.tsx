@@ -47,7 +47,7 @@ const PastRoundCardDetails: React.FC<PastRoundCardDetailsProps> = ({ data }) => 
             <div style={{marginBottom: "2em"}}>
               <Timestamp timeValue={lotteryDate} />
               <Heading size="md" color="primary" style={{textAlign:"left",width: "53%"}}>
-                Round #{lotteryNumber}
+                Round #{lotteryNumber+1}
               </Heading>
             </div>
             <TopLotteryCardHeading

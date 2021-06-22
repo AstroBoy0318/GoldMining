@@ -25,13 +25,13 @@ const ButtonWrapper = styled.div`
 `
 
 const PastLotterySearcher: React.FC<PastLotterySearcherProps> = ({ initialLotteryNumber, onSubmit }) => {
-  const [lotteryNumber, setLotteryNumber] = useState(initialLotteryNumber)
+  const [lotteryNumber, setLotteryNumber] = useState(initialLotteryNumber+1)
   const [isError, setIsError] = useState(false)
   const TranslateString = useI18n()
 
   const handleSubmit = (evt: React.FormEvent<HTMLFormElement>) => {
     evt.preventDefault()
-    onSubmit(lotteryNumber)
+    onSubmit(lotteryNumber-1)
   }
 
   const handleChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
@@ -52,7 +52,7 @@ const PastLotterySearcher: React.FC<PastLotterySearcherProps> = ({ initialLotter
             value={lotteryNumber}
             type="number"
             isWarning={isError}
-            max={initialLotteryNumber}
+            max={initialLotteryNumber+1}
             onChange={handleChange}
           />
           <ButtonWrapper>

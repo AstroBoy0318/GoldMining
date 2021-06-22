@@ -7,6 +7,7 @@ import TicketInput from 'components/TicketInput'
 import ModalActions from 'components/ModalActions'
 import { useMaxNumber, useMultiBuyLottery } from 'hooks/useBuyLottery'
 import useI18n from 'hooks/useI18n'
+import { LOTTERY_TICKET_PRICE } from '../../../../config'
 
 interface BuyTicketModalProps {
   max: BigNumber
@@ -44,7 +45,7 @@ const BuyTicketModal: React.FC<BuyTicketModalProps> = ({ max, onDismiss }) => {
         Math.floor(Math.random() * maxNumber) + 1,
         Math.floor(Math.random() * maxNumber) + 1,
       ])
-      const txHash = await onMultiBuy('10', numbers)
+      const txHash = await onMultiBuy(LOTTERY_TICKET_PRICE, numbers)
       // user rejected tx or didn't go thru
       if (txHash) {
         setRequestedBuy(false)
@@ -63,7 +64,7 @@ const BuyTicketModal: React.FC<BuyTicketModalProps> = ({ max, onDismiss }) => {
   }, [maxTickets])
 
   const cakeCosts = (amount: string): number => {
-    return +amount * 10
+    return +amount * parseInt(LOTTERY_TICKET_PRICE)
   }
   return (
     <Modal title={TranslateString(450, 'Enter amount of tickets to buy')} onDismiss={onDismiss}>
@@ -77,7 +78,7 @@ const BuyTicketModal: React.FC<BuyTicketModalProps> = ({ max, onDismiss }) => {
       />
       <div>
         <Tips>Your amount must be a multiple of 10 Gtoken</Tips>
-        <Tips>1 Ticket = 10 Gtoken</Tips>
+        <Tips>1 Ticket = {LOTTERY_TICKET_PRICE} Gtoken</Tips>
       </div>
       <div>
         <Announce>         
